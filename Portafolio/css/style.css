@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("../assets/fonts/q5uDsoa5M_tv7IihmnkabARboYE.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Crimson Pro", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #b883e180, #f6f3f9ec);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #1a1a1a;
+  font-family: "Crimson Pro", serif;
+  width: 100%;
+}
+
+h1,
+h2,
+#titulo_1 {
+  font-family: "Crimson Pro", serif;
+  font-weight: 300;
+  font-size: 170%;
+  margin: 0;
+}
+
+p,
+li,
+a,
+span,
+.texto-sobre-mi {
+  font-family: "Crimson Pro", serif;
+  font-size: 150%;
+  line-height: 1.6;
+}
+
+b {
+  font-weight: 600;
+}
+
+.principal-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn {
+  background: rgba(178, 120, 244, 0.35);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* --- SECCIÓN PRESENTACIÓN (Ligeramente ajustada para centrar el nuevo contenedor) --- */
+.presentacion {
+  flex-grow: 1;
+  display: flex;
+  /* flex-direction removed to let the inner container handle it */
+  justify-content: center;
+  align-items: center;
+  /* padding adjusted slightly to give room to the fixed nav */
+  padding: 80px 10% 0 10%; 
+}
+
+#titulo_1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.seccion-siguiente {
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.seccion-siguiente h2 {
+  margin-bottom: 30px;
+}
+
+.texto-sobre-mi {
+  max-width: 900px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.fotos-proyectos {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 400px;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.fotos-proyectos img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+  border-radius: 15px;
+}
+
+.fotos-proyectos img:hover {
+  width: 700px;
+  opacity: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lista-proyectos-links {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  margin-top: 2px;
+}
+
+.lista-proyectos-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-proyectos-links ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: 0.3s;
+  display: inline-block;
+  font-size: 100%;
+}
+
+.lista-proyectos-links ul li a:hover {
+  color: #b883e1;
+}
+
+/* Contenedor principal de la sección habilidades */
+#seccion-habilidades {
+  padding: 40px 20px;
+  text-align: center; /* Centra el título */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#seccion-habilidades h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Estilos para la lista habilidades */
+#seccion-habilidades ul {
+  list-style: none; /* Quita los puntos negros */
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#seccion-habilidades li {
+  background-color: rgba(255, 255, 255, 0.6); 
+  border: 1px solid #dcd0ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+#seccion-habilidades li:hover {
+  transform: translateY(-5px);
+  background-color: #e6e0ff;
+  cursor:pointer;
+}
+
+/* Contenedor principal de la sección sobre mi */
+#seccion-sobre-mi {
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilo del título sobre mi */
+#seccion-sobre-mi h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+  position: relative;
+}
+
+/* El texto descriptivo sobre mi */
+.texto-sobre-mi {
+  max-width: 700px; 
+  line-height: 1.8; /* Da más espacio entre líneas para que sea fácil de leer */
+  font-size: 1.1rem;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco muy suave */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra elegante y ligera */
+  text-align: justify; /* Alinea el texto de forma uniforme */
+}
+
+
+#seccion-contacto {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#seccion-contacto h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.contacto-links {
+  display: flex;
+  flex-direction: row; 
+  gap: 30px;           
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;     
+}
+
+
+.contacto-links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.3rem;      
+  padding: 25px 60px;     
+  min-width: 300px;       
+  border: 5px solid #ffffff;
+  border-radius: 15px;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.contacto-links a:hover {
+  background-color: #ffffff9d; 
+  color: #6a1b9a;             
+  border-color: #e1bee7;
+  transform: translateY(-5px); 
+}
+
+.presentacion-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; 
+  max-width: 1200px;
+  width: 100%;
+}
+
+.presentacion-texto {
+  flex: 1;
+  text-align: left; 
+}
+
+.presentacion-foto {
+  flex: 0 0 auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-perfil {
+  width: 250px;  
+  height: 370px; 
+  object-fit: cover; 
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+  border-color: rgba(184, 131, 225, 0.5); /* Color lila del fondo */
+}
